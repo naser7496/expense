@@ -1,0 +1,85 @@
+
+@font-face {
+    font-family: 'IranSans';
+    src: url('/fonts/iransans.ttf') format('truetype');
+}
+
+body{
+    background-color: #D8B4F8;
+    font-family: "IranSans", tahoma, Arial, sans-serif; 
+}
+
+a{
+    text-decoration: none;
+}
+
+  
+
+.white-link{
+    color: #fff;
+}
+  
+.form{
+    direction: rtl;
+}
+.custom-navbar-bg{
+    background-color: #183D3D;
+}
+
+/* Custom font size for the p-home class */
+.p-home {
+    font-size: 10px; /* Adjust the size as needed */
+}
+
+/* Custom image size for the img-home class */
+.img-home {
+    width: 150px; /* Adjust the width as needed */
+    height: 150px; /* Adjust the height as needed */
+}
+
+#welcome{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.profile-img{
+    width: 300px; /* Adjust the width as needed */
+    height: 200px;
+}
+
+.icon{
+    width: 80px;
+    margin-right: 50px;
+}
+
+.navbar-brand-white {
+    color: #fff; /* White color */
+}
+
+.navbar-toggler-white {
+    color: #fff; /* White color */
+}
+
+#demo{
+    color: white;
+    font-size: 15px;
+}
+
+.header-img-prof{
+    width: 50px;
+}
+
+.expense-table{
+    direction: rtl;
+}
+
+
+.quote-part{
+    color: black;
+}
+
+.currency-font{
+    font-size: 10px;
+    color: #183D3D;
+}
+

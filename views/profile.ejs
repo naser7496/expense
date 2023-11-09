@@ -1,0 +1,64 @@
+<%- include('header') -%>
+
+  <div class="container">
+    <p class="quote-part"></p>
+    <% if (!name) { %>
+      <form action="/profile" method="post">
+        <div class="form-group">
+          <label for="name">نام کاربریتون رو وارد کنید</label>
+          <input type="text" class="form-control" name="name" id="name" required>
+        </div>
+        <div class="form-group">
+          <label for="phoneNumber">شماره تلفنتون رو وارد کنید</label>
+          <input type="tel" class="form-control" name="phoneNumber" id="phoneNumber" required>
+        </div>
+        <div class="form-group">
+          <label for="email">ایمیلتون رو وارد کنین</label>
+          <input type="email" class="form-control" name="email" id="email" required>
+        </div>
+        <div class="form-group">
+          <label for="explain">دلیلتون برای استفاده از برنامه چیه؟</label>
+          <input type="text" class="form-control" name="explain" id="explain">
+        </div>
+        <button type="submit" class="btn btn-primary">ثبت نام</button>
+      </form>
+      <% } else { %>
+        <h1 id="welcome" class="text-center">به صفحه پروفایل شخصیتون خوش اومدین <%=name%> عزیز</h1>
+        <div class="profile-img-container">
+          <div>
+            <img class="profile-img mx-auto d-block" src="/images/category.jpg" alt="">
+          </div>
+
+          <div class="container mt-4 mb-4">
+            <div class="row text-center">
+              <div class="col">
+                <img class="icon" src="/images/calen.png" alt="calender">
+                <p>محاسبات دوره ای</p>
+              </div>
+
+              <div class="col">
+                <img class="icon" src="/images/expense.png" alt="expense">
+                <p>چارت های جذاب</p>
+              </div>
+
+              <div class="col">
+                <img class="icon" src="/images/schedule.png" alt="schedule">
+                <p>ثبت روزانه و ماهانه</p>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+        <div class=" mx-auto text-center mt-4 mb-5">
+          <div class="d-grid gap-2 col-3 mx-auto mb-2">
+            <a class="btn btn-danger btn-md " href="/filter">فیلتر هزینه ها</a>
+          </div>
+          <div class="d-grid gap-2 col-3 mx-auto mb-2">
+            <a class="btn btn-success btn-md" href="/expenses">لیست اصلی هزینه ها</a>
+          </div>
+        </div>
+        <% } %>
+  </div>
+
+  <%- include('footer') -%>

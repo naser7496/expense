@@ -1,0 +1,17 @@
+<%- include('header') -%>
+
+
+  <h1>تغییر اطلاعات پروفایل</h1>
+  <form method="POST"  action="/expenses/<%=userId%>?_method=PUT" >
+    <label for="name">نام کاربری جدیدتون رو وارد کنید</label>
+    <input type="text" name="name" id="name" value="<%=name%>" required>
+    <label for="phonrNumber">شماره تلفن جدیدتون رو وارد کنید</label>
+    <input type="tel" name="phoneNumber" id="phoneNumber" value="<%=phoneNumber%>" required>
+    <label for="email">ایمیل جدیدتون رو وارد کنین</label>
+    <input type="email" name="email" id="email" value="<%=email%>" required>
+    <button type="submit">ذخیره تغییرات</button>
+    <a href="/profile">لغو کردن</a>
+  </form>
+
+
+  <%- include('footer') -%>

@@ -1,0 +1,44 @@
+<%- include('header') -%>
+    <h1 class="text-center">حذف هزینه ها</h1>
+    
+    <div class="d-flex align-items-center justify-content-center min-vh-100">
+        <div class="container">
+            <p class="text-center mb-5">آیا از حذف هزینه اطمینان دارید؟</p>
+            <table class="table table-striped table-bordered expense-table">
+                <thead>
+                    <tr>
+                        <th>نوع</th>
+                        <th>مقدار هزینه</th>
+                        <th>دسته بندی</th>
+                        <th>تاریخ</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <%=expense.description%>
+                        </td>
+                        <td> تومان <%=expense.amount%>
+                        </td>
+                        <td>
+                            <%= expense.category %>
+                        </td>
+                        <td>
+                            <%= expense.date.toLocaleString('fa-Ir', { month: 'short' , day: '2-digit' }) %>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <form method="POST" action="/expenses/<%= expense._id %>?_method=DELETE">
+                <div class="text-center">
+                    <button class="btn btn-danger" type="submit">حذف</button>
+                    <a class="btn btn-secondary" href="/expenses">لغو</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <%- include('footer') -%>

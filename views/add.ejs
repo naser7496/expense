@@ -1,0 +1,26 @@
+<%- include('header.ejs') %>
+
+<div class="container form">
+    <h1 class="mt-4 mb-4 text-center">اضافه نمودن هزینه جدید</h1>
+    <form method="post" action="/expenses" class="mb-4">
+        <div class="form-group">
+            <label for="description">نام هزینه:</label>
+            <input type="text" id="description" name="description" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="amount">مقدار (تومان):</label>
+            <input type="text" id="amount" name="amount" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="category">گروه:</label>
+            <input type="text" id="category" name="category" class="form-control" required>
+        </div> 
+        <div class="text-center mt-4 mb-4">
+            <button type="submit" class="btn btn-success ">اضافه شود</button>
+            <a href="/expenses" class="btn btn-danger ">لغو کردن</a>
+        </div>
+       
+    </form>
+</div>
+
+<%- include('footer.ejs') %>

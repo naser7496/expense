@@ -1,0 +1,59 @@
+<%- include('header') -%>
+
+   
+       
+        
+        <div class="container-fluid mt-4">
+            <h2 class="mb-4 text-center">لیست هزینه ها </h2>
+            
+        
+        
+            <div class="container text-center">
+                <table class="table table-striped  table-bordered table-sm expense-table">
+                    <thead>
+                        <tr>
+                            <th>نوع</th>
+                            <th>مقدار هزینه</th>
+                            <th>دسته بندی</th>
+                            <th>تاریخ</th>
+                            <th>تغییرات</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% expenses.forEach(expense => { %>
+                        <tr>
+                            <td>
+                                <%= expense.description %>
+                            </td>
+                            <td>
+                                <%= expense.amount %> <span class="currency-font">هزارتومان</span>
+                            </td>
+                            <td>
+                                <%= expense.category %>
+                            </td>
+                            <td>
+                                <%= expense.date.toLocaleString('fa-Ir', { month: 'short', day: '2-digit' }) %>
+                            </td>
+                            <td>
+                                <a href="/expenses/<%= expense._id %>/edit">اصلاح</a>
+                                <a href="/expenses/<%= expense._id %>/delete">حذف</a>
+                            </td>
+                        </tr>
+                        <% }) %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="container mb-5 ">
+            <div class="d-grid gap-2 col-3 mx-auto text-center">
+                <button type="button" class="btn btn-success "><a href="/expenses/add" class="white-link">اضافه کردن هزینه</a></button>
+                <button type="button" class="btn btn-primary "><a href="/expenses/report" class="white-link">گزارش</a></button>
+            </div>
+            <div class="d-grid gap-2 col-3 mx-auto  text-center mt-2">
+                <button type="button" class="btn btn-danger "><a href="/profile" class="white-link">بازگشت به پروفایل</a></button>
+            </div>
+        </div>
+    
+
+    <%- include('footer') -%>
